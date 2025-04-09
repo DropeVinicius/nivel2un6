@@ -1,0 +1,2933 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+
+    <title>Nivelamento - Língua Portuguesa Nível 2 - Unidade 6</title>
+    <style>
+        /* Global styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Oculta rolagem horizontal */
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    
+        .titulo-programa {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .titulo-materia {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 133px;
+            color: #003974;
+            font-weight: lighter;
+        }
+
+        .subtitulo-professor {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 59px;
+            color: #0058B4;
+            font-weight: lighter;
+        }
+
+        .titulo-unidade {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 60px;
+        }
+
+        .titulo-saiba-mais {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 70px;
+        }
+        /* Estilização de Bebas Neue FIM */
+
+
+        /* Estilização de Roboto INICIO */
+        .peso-1 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 45px;
+        }
+
+        .texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        .sub-texto {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .titulo-box {
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+        }
+
+        .fonte {
+            font-family: 'Roboto', sans-serif;
+            font-size: 25px;
+        }
+
+        .citacao {
+            font-family: 'Roboto', sans-serif;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        .referencias {
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+        }
+
+        /* Estilização de Roboto FIM */
+        /* Navbar styles INICIO */
+        .navbar {
+            background-color: #9F43BE;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px;
+            position: -webkit-sticky; /* Para navegadores antigos */
+            position: sticky; /* Para manter no topo durante o scroll */
+            top: 0; /* Faz com que a navbar fique no topo */
+            z-index: 10; /* Garante que o menu fique acima de outros elementos */
+            transition: background-color 0.3s ease; /* Transição suave para o efeito */
+        }
+
+        .navbar .logo img {
+            height: 50px;/* Ajuste conforme necessário */
+            width: auto;
+        }
+
+        .navbar .menu-toggle {
+            cursor: pointer;
+            font-size: 1.5em;
+            display: block;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: none;
+            flex-direction: column;
+            background-color: #9f43be;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            width: 220px; /* Aumenta um pouco a largura */
+            max-height: 300px; /* Define um limite de altura */
+            overflow-y: auto; /* Adiciona scroll vertical se necessário */
+            border-radius: 5px;
+            z-index: 10;
+            scrollbar-width: thin; /* Estiliza a barra de rolagem (Firefox) */
+            scrollbar-color: #fff #9f43be; /* Personaliza a cor */
+        }
+
+        .navbar ul.show {
+            display: flex;
+        }
+
+        .navbar ul li {
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .navbar ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .navbar ul li a:hover {
+            color: #003974; /* Cor ao passar o mouse */
+        }
+        .navbar .menu-toggle i:last-child {
+            display: none; /* Esconde o ícone de fechar inicialmente */
+        }
+        /* Para Chrome, Edge e Safari */
+        .navbar ul::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .navbar ul::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+        .navbar ul::-webkit-scrollbar-track {
+            background-color: #9f43be;
+        }
+
+         /* Navbar styles FIM */
+
+        /* Titulo styles INICIO */
+        .titulo-intro {
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .titulo-intro h1 {
+            margin: 0;
+            padding: 15px;
+        }
+        /* Titulo styles FIM */
+
+        /* Estilo da Capa do Livro INICIO*/
+        .capa-livro {
+            position: relative;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            overflow: hidden; /* Para evitar que o pseudoelemento saia do container */
+            border-top: 3px solid #003974;
+            border-bottom: 3px solid #003974;
+        }
+
+        .capa-livro::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://res.cloudinary.com/di4ria1pf/image/upload/v1741784872/xw24i9yzlzfsicthkntq.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* Controle da opacidade */
+            z-index: -1; /* Coloca o background atrás do conteúdo */
+        }
+
+        
+
+        .capa-livro .conteudo-capa {
+            text-align: center;
+            color: white;
+            padding: 20px; /* Espaço interno para o texto */
+        }
+
+        .capa-livro .titulo-materia {
+            font-size: 80px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 0;
+        }
+
+        .capa-livro .subtitulo-professor {
+            font-size: 40px;
+            font-family: 'Bebas Neue', cursive;
+            margin: 10px 0 0;
+        }
+        /* Estilo da Capa do Livro FIM*/
+
+        /* Barra Superior */
+        .barra-superior {
+            background-color: #015A42; /* Cor verde escuro */
+            width: 100%;
+            padding: 15px 15px;
+            text-align: center;
+            box-sizing: border-box; /* Inclui padding e bordas no cálculo da largura */
+            overflow-x: hidden; /* Previne rolagem horizontal */
+        }
+
+        .barra-superior .titulo-barra {
+            font-family: 'Bebas Neue', cursive;
+            color: #FFF; /* Cor branca */
+            font-size: 50px;
+            font-weight: lighter;
+            margin: 0;
+        }
+
+        /* Conteúdo da Introdução */
+        .introducao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            margin-top: 100px;
+            background-color: #E2F4EB; /* Fundo neutro */
+            overflow-x: hidden; /* Impede rolagem horizontal */
+        }
+        
+        .introducao .titulo-introducao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .introducao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        .introducao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* RESPONSIVIDADE SEÇÕES ACIMA*/
+        /* Capa do Livro - Responsividade */
+        @media (max-width: 768px) {
+            .capa-livro {
+                height: 350px; /* Reduz a altura da capa */
+                padding: 20px; /* Ajusta o espaçamento interno */
+            }
+
+            .capa-livro .titulo-materia {
+                font-size: 50px; /* Reduz o tamanho do título */
+            }
+
+            .capa-livro .subtitulo-professor {
+                font-size: 30px; /* Reduz o tamanho do subtítulo */
+            }
+
+            .capa-livro .conteudo-capa {
+                padding: 15px; /* Ajusta o padding para telas menores */
+            }
+        }   
+            /* Seção Introdução - Responsividade */
+        @media (max-width: 768px) {
+            .barra-superior {
+                padding: 10px; /* Reduz o padding da barra */
+            }
+
+            .barra-superior .titulo-barra {
+                font-size: 1.8rem; /* Reduz o tamanho do título na barra */
+            }
+
+            .introducao .titulo-introducao {
+                font-size: 2.8rem; /* Reduz o tamanho do título da introdução */
+                margin-top: 20px; /* Ajusta o espaçamento superior */
+            }
+
+            .introducao .caixa-texto {
+                padding: 20px; /* Reduz o padding da caixa de texto */
+                width: 90%; /* Ajusta a largura da caixa */
+            }
+
+            .introducao .caixa-texto p {
+                font-size: 1.2rem; /* Reduz o tamanho do texto */
+                line-height: 1.4;
+                margin-bottom: 10px; /* Ajusta a margem entre os parágrafos */
+            }
+        }
+        /* Responsividade para o título da seção de Programa */
+        @media (max-width: 768px) {
+            .titulo-programa {
+                font-size: 50px; /* Ajuste do tamanho do título */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo-programa {
+                font-size: 35px; /* Ajuste para telas muito pequenas */
+            }
+        }
+        /* Título da seção */
+        .secao1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9f43be11;
+            padding: 20px;  
+        }
+
+        .secao1 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+            
+        }
+
+        .secao1 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+        
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao1 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao1 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao1 p {
+                font-size: 1.2rem;
+            } 
+        }
+         /* Título da seção */
+        .secao2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #FFF;
+            padding: 20px;  
+        }
+
+        .secao2 h1 {
+            font-size: 25px;
+            font-family: 'Roboto', sans-serif;
+            color: #015A42; /* Cor verde */
+            width: 90%;
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .secao2 p {
+            font-size: 19px;
+            text-align: justify;
+            line-height: 1.6;
+            color: #333;
+            margin: 20px auto;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+                text-align: left;
+            }
+
+            .secao2 p {
+                font-size: 0.9rem;
+                line-height: 1.4;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .secao2 h1 {
+                font-size: 1.5rem;
+            }
+
+            .secao2 p {
+                font-size: 1.2rem;
+            } 
+        }
+        .small-frame {
+            border: 2px solid #9F43BE;
+            border-radius: 10px;
+            width: 80%; /* Usa um tamanho mais fluido */
+            max-width: 700px;
+            background-color: #FFF;
+            height: auto;
+            margin: 20px auto; /* Centraliza e ajusta margem superior */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+        }
+
+        .small-frame p {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            line-height: 1.8; /* Maior espaçamento entre linhas */
+            text-align: center;
+            margin: 20px auto;
+        }
+        .small-frame h4{
+            text-align: center;
+            margin: 20px auto;
+            line-height: 1.8;
+            font-family: 'Roboto', sans-serif;
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .small-frame {
+                width: 90%; /* Mais largura para ocupar melhor a tela */
+                padding: 15px;
+            }
+
+            .small-frame p {
+                font-size: 14px; /* Mantém boa leitura */
+                line-height: 1.7;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-frame {
+                width: 95%; /* Usa quase toda a tela para não ficar apertado */
+                padding: 10px;
+            }
+
+            .small-frame p {
+                font-size: 13px; /* Mantém o texto confortável */
+                line-height: 1.6;
+            }
+        }
+        .small-frameg {
+            border: 2px solid #015A42;
+            border-radius: 10px;
+            width: 80%; /* Usa 90% da largura do contêiner */
+            max-width: 700px; /* Define limite máximo */
+            background-color: #FFF;
+            height: auto;
+            margin: 20px auto; /* Centraliza e ajusta margem superior */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+        }
+        .divisor {
+            border: none;
+            border-top: 2px solid #015A42; /* Cor igual à borda do contêiner */
+            width: 100%;
+            margin: 10px auto; /* Centraliza o divisor */
+            opacity: 0.7; /* Torna a linha um pouco mais suave */
+        }
+        .small-frameg p {
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            line-height: 1.8;
+            text-align: justify;
+            margin: 20px auto;
+        }
+
+        .small-frameg h4{
+            text-align: center;
+            margin: 20px auto;
+            line-height: 1.8;
+            font-family: 'Roboto', sans-serif;
+        }
+                /* Responsividade */
+        @media (max-width: 768px) {
+            .small-frameg {
+                width: 90%; /* Mais largura para ocupar melhor a tela */
+                padding: 15px;
+            }
+
+            .small-frameg p {
+                font-size: 14px; /* Mantém boa leitura */
+                line-height: 1.7;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-frameg {
+                width: 95%; /* Usa quase toda a tela para não ficar apertado */
+                padding: 10px;
+            }
+
+            .small-frameg p {
+                font-size: 13px; /* Mantém o texto confortável */
+                line-height: 1.6;
+            }
+        }
+         /* Acordeon styles */
+        .acordeon-container {
+            margin-top: 20px;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+        }
+
+        .acordeon {
+            border-radius: 10px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .acordeon-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #9F43BE;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .acordeon-headerv {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #015A42;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 17px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        .acordeon-content {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #9F43BE;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+        .acordeon-contentv {
+            display: none;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+            padding-top: 0; /* Remove padding para que o header toque no conteúdo */
+            border: 2px solid #015A42;
+            border-radius: 0 0 10px 10px; /* Apenas canto inferior arredondado */
+        }
+        .acordeon-content p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+        .acordeon-contentv p {
+            margin: 20px auto;
+            font-size: 16px;
+        }
+            /* Estilo do ícone da seta */
+        .acordeon-icon {
+            font-size: 40px;
+            transition: transform 0.3s ease; /* Para rotação suave */
+        }
+            
+            /* Rotação da seta para cima */
+        .acordeon-header.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Rotação da seta para cima */
+        .acordeon-headerv.active .acordeon-icon {
+            transform: rotate(180deg); /* Gira a seta para cima */
+        }
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .acordeon-header {
+                font-size: 20px; /* Reduzir tamanho do texto */
+                padding: 12px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 30px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 14px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 10px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 15px; /* Ajustar margem para menor espaçamento */
+            }
+        }
+        /* Responsividade para telas menores ainda (480px) */
+        @media (max-width: 480px) {
+            .acordeon-header {
+                font-size: 19px; /* Reduz ainda mais o tamanho do texto */
+                padding: 10px; /* Ajustar espaçamento */
+            }
+
+            .acordeon-icon {
+                font-size: 25px; /* Reduzir tamanho do ícone */
+            }
+
+            .acordeon-content {
+                font-size: 13px; /* Reduzir tamanho do texto do conteúdo */
+                padding: 8px; /* Reduzir espaçamento interno */
+            }
+
+            .acordeon-content p {
+                margin: 10px; /* Ajustar margem para menor espaçamento */
+                font-size: 19px;
+            }
+        }
+            /* Acordeon styles FIM */
+
+        /* Estilo para os tópicos de texto */
+        .topico-texto {
+            width: 90%;
+            max-width: 800px;
+            padding: 10px;
+        }
+
+        .topico-texto p {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            font-weight: bold;
+        }
+
+        .topico-texto ul {
+            list-style: none; /* Remove marcadores padrão */   
+        }
+
+        .topico-texto ul li {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            display: flex;
+            align-items: flex-start; /* Alinha o texto com o ícone */
+            white-space: pre-wrap; /* Preserva espaços e quebras de linha */
+            flex-direction: column;
+            margin: 20px auto;
+        }
+        /* Subitens */
+        .subitens {
+            padding-left: 25px; /* Indentação para subitens */
+        }
+
+        .subitens li {
+            display: list-item;
+            list-style-type: disc; /* Aparece como bolinha • */
+            color: #444;
+            font-size: 15px;
+        }
+                .topico-destaque {
+            font-size: 18px; /* Aumente o tamanho conforme a necessidade */
+            font-weight: 400;
+            padding: 5px 0;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .topico-texto {
+                padding: 15px;
+            }
+
+            .topico-texto p {
+                font-size: 16px;
+            }
+
+            .topico-texto ul li {
+                font-size: 14px;
+            }
+        }
+        .quadroimg {
+            border: 2px solid #015A42;
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto; /* Centraliza horizontalmente */
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .quadroimg img {
+            max-width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .fonte-imagem {
+            font-size: 12px !important;
+            color: #555;
+            display: flex;
+            justify-content: left;
+            margin-top: 5px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .text-italic {
+            font-style: italic;
+        }
+        @media (max-width: 600px) {
+    .quadroimg {
+        width: 90%;
+        padding: 8px;
+    }
+
+    .quadroimg img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .fonte-imagem {
+        width: 90%;
+        font-size: 11px !important;
+    }
+
+    .titulo-quadrov {
+        font-size: 16px;
+        text-align: center;
+        margin-top: 30px;
+    }
+}
+        .text-italicu{
+            font-style: italic;
+            text-decoration: underline;
+        }
+        /* Título dentro do quadro */
+        .titulo-quadrov {
+            font-size: 18px;
+            font-family: 'Roboto', sans-serif;
+            color: #333; /* Verde */
+            margin-top: 50px;
+            font-weight: normal; /* Evita que o título fique em negrito */
+        }
+        .text-greenv{
+            color: #015A42;
+            font-weight: bold;
+        }
+        
+    /* Container do slider */
+        .slider-container {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            overflow: hidden;
+            border: 3px solid #015A42;; /* Borda violeta */
+            border-radius: 10px;
+            background-color: #fff;
+            margin: 20px auto;
+        }
+
+        /* Slider */
+        .slider {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        /* Slides */
+        .slide {
+            min-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 30px;
+            box-sizing: border-box;
+            overflow-wrap: break-word;
+            text-align: center;
+            flex-direction: column;
+        }
+                /* Para o texto do slide não quebrar estranho */
+        .slide > strong, 
+        .slide > span {
+            display: inline; /* garante inline, inclusive o strong */
+            white-space: normal;
+        }
+        .slide strong {
+            font-weight: bold;
+            white-space: normal; /* Permite que o número não quebre */
+        }
+        .slide-texto {
+            display: inline-block; /* agora vira um bloco centrado */
+            max-width: 90%;
+            line-height: 1.5;
+            font-size: 18px;
+            text-align: justify; /* texto alinha à esquerda, mas o bloco fica centralizado */
+        }
+        .slide-imagem {
+            max-width: 100%;
+            max-height: 300px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        .slider-imagem-grande {
+            max-width: 100%;
+            max-height: 500px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        .slide img{
+            margin: 0 auto;
+        }
+        /* Ajustar a posição da fonte abaixo da imagem */
+        .fonte-imagemr {
+            font-size: 14px !important;
+            color: #000;
+            font-weight: bold;
+            text-align: right !important;
+        }
+                /* Responsivo */
+        @media (max-width: 768px) {
+            .slide {
+                padding: 25px 20px;
+            }
+            .slide-texto {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slide {
+                padding: 20px 15px;
+            }
+            .slide-texto {
+                font-size: 15px;
+            }
+        }
+        /* Ajuste para responsividade */
+        @media (max-width: 768px) {
+            .slider-container {
+                width: 95%;
+            }
+
+            .slide {
+                font-size: 16px;
+                padding: 25px 30px; /* Aumenta o espaço interno */
+                min-height: 150px; /* Garante que todos os slides tenham espaço suficiente */
+                overflow: hidden;
+            }
+
+            .arrow {
+                font-size: 30px;
+            }
+
+            .left-arrow {
+                left: -5px;
+            }
+
+            .right-arrow {
+                right: -5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .slider-container {
+                width: 100%;
+            }
+
+            .slide {
+                font-size: 14px;
+                padding: 20px 35px; /* Mais espaço para texto */
+                min-height: 160px; /* Mais altura mínima */
+            }
+
+            .arrow {
+                font-size: 25px;
+            }
+
+            .left-arrow {
+                left: -8px;
+            }
+
+            .right-arrow {
+                right: -8px;
+            }
+        }
+                /* Setas */
+        .arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #015A42;
+            font-size: 36px;
+            cursor: pointer;
+            z-index: 10;
+            transition: 
+            color 0.3s ease,
+            transform 0.2s ease;
+            padding: 5px;
+        }
+
+        /* Efeito suave no hover com deslocamento personalizado */
+        .left-arrow:hover {
+            color: #028b65;
+            transform: translateY(calc(-50% + 2px)) scale(1.1); /* Move levemente para baixo */
+        }
+
+        .right-arrow:hover {
+            color: #028b65;
+            transform: translateY(calc(-50% - 2px)) scale(1.1); /* Move levemente para cima */
+        }
+
+        /* Posição das setas */
+        .left-arrow {
+            left: 10px;
+        }
+
+        .right-arrow {
+            right: 10px;
+        }
+     /* SEÇÃO FIQUE ATENTO! */
+        .alert-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #9F43BE; /* Cor de fundo violeta */
+            padding: 20px 10px; /* Espaçamento uniforme superior e inferior */
+            margin: 0; /* Remover margens externas */
+        }
+
+        .alert-container {
+            width: 90%;
+            max-width: 800px; /* Limite máximo de largura */
+            margin: 0 auto; /* Centralizar horizontalmente */
+            padding: 0; /* Garantir que o container interno não tenha espaçamento adicional */
+        }
+
+        .alert-title {
+            color: #FFF; /* Cor branca */
+            font-family: 'Bebas Neue', sans-serif; /* Fonte Bebas Neue */
+            font-size: 50px; /* Tamanho do título */
+            font-weight: lighter;
+            margin: 0 0 20px 0; /* Garantir que o título não afete margens desnecessárias */
+        }
+
+        .alert-paragraph {
+            color: #FFF; /* Cor branca */
+            font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+            font-size: 18px; /* Tamanho do texto */
+            line-height: 1.6; /* Espaçamento entre linhas */
+            margin: 0; /* Remover margens inferiores adicionais */
+            text-align: justify;
+        }
+                /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .alert-title {
+                font-size: 40px; /* Reduzir tamanho do título */
+                margin-bottom: 15px; /* Ajustar espaçamento inferior */
+            }
+
+            .alert-paragraph {
+                font-size: 16px; /* Reduzir tamanho do texto */
+                line-height: 1.5; /* Ajustar espaçamento entre linhas */
+                text-align: left; /* Alinhar à esquerda para facilitar leitura em telas menores */
+            }
+
+            .alert-section {
+                padding: 15px 5px; /* Reduzir espaçamento superior e inferior */
+            }
+        }
+        .small-frameg {
+            border: 2px solid #015A42;
+            border-radius: 10px;
+            width: 80%; /* Usa 90% da largura do contêiner */
+            max-width: 700px; /* Define limite máximo */
+            background-color: #FFF;
+            height: auto;
+            margin: 20px auto; /* Centraliza e ajusta margem superior */
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Leve sombra para destaque */
+        }
+        .divisor {
+            border: none;
+            border-top: 2px solid #015A42; /* Cor igual à borda do contêiner */
+            width: 100%;
+            margin: 10px auto; /* Centraliza o divisor */
+            opacity: 0.7; /* Torna a linha um pouco mais suave */
+        }
+        .small-frameg p {
+            font-size: 15px;
+            font-family: 'Roboto', sans-serif;
+            color: #000;
+            line-height: 1.8;
+            text-align: justify;
+            margin: 20px auto;
+        }
+
+        .small-frameg h4{
+            text-align: center;
+            margin: 20px auto;
+            line-height: 1.8;
+            font-family: 'Roboto', sans-serif;
+        }
+                /* Responsividade */
+        @media (max-width: 768px) {
+            .small-frameg {
+                width: 90%; /* Mais largura para ocupar melhor a tela */
+                padding: 15px;
+            }
+
+            .small-frameg p {
+                font-size: 14px; /* Mantém boa leitura */
+                line-height: 1.7;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .small-frameg {
+                width: 95%; /* Usa quase toda a tela para não ficar apertado */
+                padding: 10px;
+            }
+
+            .small-frameg p {
+                font-size: 13px; /* Mantém o texto confortável */
+                line-height: 1.6;
+            }
+        }
+        .text-left {
+            text-align: left !important;
+            margin-left: 40px !important; /* Ajusta alinhamento à esquerda */
+            margin-right: auto !important;
+        }
+
+        .text-right {
+            text-align: right !important;
+            margin-right: 40px !important; /* Ajusta alinhamento à direita */
+            margin-left: auto !important;
+        }
+        .referencia {
+            position: relative;
+            width: 90%; /* Ajuste de largura */
+            max-width: 800px; /* Limite máximo */
+            margin: 20px auto;
+        }
+        .referenciap {
+            word-break: break-word;
+            overflow-wrap: break-word;
+        }
+        .linha-curta {
+            width: 150px; /* você pode ajustar o tamanho */
+            height: 2px;
+            background-color: #000;
+        }
+
+        .referencia p {
+            font-size: 19px;
+            text-align: left;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+        }
+        .centralizado {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            font-weight: bold;
+        }
+        /* Retângulo de fundo */
+        .background-section {
+            background-color: #015A42; /* Cor de fundo verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            min-height: 350px; /* Altura mínima */
+            width: 90%; /* Largura ajustada à estrutura */
+            max-width: 800px; /* Limite máximo */
+            height: auto; /* Altura do retângulo */
+            margin: 50px auto; /* Espaçamento da seção acima e centralização */
+            position: relative; /* Define o contexto de empilhamento */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .background-section {
+                width: 95%; /* Ajusta a largura */
+                margin: 50px auto; /* Ajuste de margem */
+            }
+        }
+        
+        /* Retângulo transparente (sobreposição) */
+        .transparent-section {
+            background-color: rgba(255, 255, 255, 0.822); /* Tom verde com transparência */
+            border: 2px solid #015A42; /* Borda sólida verde */
+            border-radius: 20px; /* Bordas arredondadas */
+            width: calc(100% - 40px); /* Reduz tamanho para acomodar margens */
+            height: 100%;
+            position: absolute; /* Define posicionamento relativo */
+            top: 20px;
+            left: 20px; 
+            z-index: 1; /* Garante que o retângulo fique sobre o fundo */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra opcional */
+            display: flex; /* Usamos flexbox para alinhar o conteúdo */
+            flex-direction: column; /* Alinha os elementos verticalmente */
+            justify-content: space-evenly; /* Distribui espaço uniformemente */
+            align-items: center; /* Alinha o conteúdo à esquerda */
+            text-align: center; /* Centraliza o texto */
+        }
+        
+        
+                /* Responsividade - Ajuste da largura da transparent-section para telas menores */
+        @media (max-width: 768px) {
+            .transparent-section {
+                width: 90%; /* Diminui a largura da sobreposição */
+                left: 5%; /* Ajusta o posicionamento para centralizar */
+                right: 5%; /* Garante que o elemento ocupe menos espaço na tela */
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+        /* Círculo verde */
+        .circle-green {
+            position: absolute;
+            top: -30px; /* Distância do topo */
+            left: -30px; /* Distância da esquerda */
+            background-color: #015A42; /* Cor verde */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo */
+            height: 120px; /* Tamanho do círculo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 2; /* Garantir que fique sobre o fundo */
+        }
+
+        /* Círculo branco sobre o verde */
+        .circle-white {
+            position: absolute;
+            top: -4px; /* Eleva o círculo branco para cima */
+            left: -5px; /* Centraliza o círculo branco sobre o verde */
+            background-color: white; /* Cor branca */
+            border-radius: 50%; /* Para garantir que seja redondo */
+            width: 120px; /* Tamanho do círculo branco */
+            height: 120px; /* Tamanho do círculo branco */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 3; /* Coloca o círculo branco sobre o verde */
+        }
+
+        /* Estilizando o ícone dentro do círculo branco */
+        .circle-white i {
+            font-size: 80px; /* Tamanho do ícone */
+            color: #015A42; /* Cor verde para o ícone */
+        }
+        /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .circle-green, .circle-white {
+                width: 60px; /* Diminui o tamanho */
+                height: 60px; /* Diminui o tamanho */
+                top: -5px; /* Ajusta o posicionamento */
+                left: -5px; /* Ajusta o posicionamento */
+            }
+
+            .circle-white i {
+                font-size: 40px; /* Reduz o ícone */
+            }
+        }
+        .learn-more-title {
+            color: #015A42; /* Cor verde */
+            font-size: 50px; /* Tamanho do título */
+            font-weight: lighter;
+            text-align: left;
+            font-family: 'Bebas Neue', sans-serif; /* Fonte Bebas Neue */
+            margin: -25px 0;
+            width: 80%; /* Ocupa toda a largura disponível */
+        }
+        .learn-more-paragraph {
+            font-family: 'Roboto', sans-serif; /* Fonte Roboto */
+            text-align: left;
+            font-size: 17px;
+            line-height: 1.4; /* Espaçamento entre linhas */
+            color: #000; /* Cor verde */
+            margin: -15px 0; /* Reduz margens */
+            width: 90%; /* Ocupa toda a largura disponível */
+            word-wrap: break-word;
+        }
+        .centered-paragraph {
+            text-align: center; /* Centraliza o texto horizontalmente */
+            margin: -5px 0; /* Ajusta a margem para uniformidade */
+            font-size: 17px; /* Mantém o tamanho consistente */
+            line-height: 1.4; /* Controla o espaçamento entre linhas */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .learn-more-title {
+                font-size: 30px; /* Ajusta o tamanho do título */
+                text-align: center;
+                margin: 10px 0;
+            }
+
+            .learn-more-paragraph {
+                font-size: 15px; /* Ajusta o tamanho do texto */
+                line-height: 1.4;
+                text-align: justify; /* Centraliza o texto */
+                margin: 5px 0; /* Reduz margens */
+            }
+        }
+            .outer-background {
+                padding: 10px;
+                background-color: #9f43be11; /* Cor de fundo para o contêiner externo */
+        }
+        .play-icon {
+            display: flex; /* Flexbox para centralizar o conteúdo */
+            justify-content: center;
+            align-items: center;
+            background-color: #015A42; /* Fundo verde */
+            color: #FFF; /* Ícone branco */
+            width: 90px; /* Largura do botão */
+            height: 55px; /* Altura do botão */
+            border-radius: 13px;
+            font-size: 40px; /* Tamanho do ícone */
+            cursor: pointer; /* Cursor de clique */
+            transition: transform 0.3s ease; /* Efeito de transição */
+        }
+
+        .play-icon:hover {
+            transform: scale(1.1); /* Aumenta levemente no hover */
+        }
+                /* Responsividade - Ajuste para telas menores */
+        @media (max-width: 768px) {
+            .play-icon {
+                width: 60px; /* Diminui a largura */
+                height: 40px; /* Diminui a altura */
+                font-size: 25px; /* Diminui o tamanho do ícone */
+            }
+        }
+        /* Modal - Oculto por padrão */
+        .video-modal {
+            display: none; /* Inicialmente o modal está oculto */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro transparente */
+            z-index: 1000; /* Garantir que o modal fique acima de outros conteúdos */
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Conteúdo do modal (onde ficará o vídeo) */
+        .video-content {
+            position: relative;
+            background-color: #015A42;
+            border-radius: 10px;
+            padding: 20px;
+        }
+         
+        /* Responsividade - Ajustes para dispositivos móveis */
+        @media (max-width: 768px) {
+            .video-content {
+                max-width: 100%; /* Maximize a largura do modal no mobile */
+                padding: 10px;
+            }
+
+            .video-content iframe {
+                width: 100%; /* O iframe ocupará toda a largura disponível */
+                height: 56.25vw; /* Isso mantém a proporção de 16:9 */
+                max-height: 80vh; /* Evita que o vídeo ultrapasse a tela */
+                border-radius: 10px;
+            }
+        }
+
+        /* Botão de fechar */
+        .close-btn {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            font-size: 40px;
+            color: #FFF;
+            cursor: pointer;
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+        .close-btn:hover {
+            transform: scale(1.2); /* Aumenta levemente no hover */
+            color: #FF0000; /* Muda a cor para vermelho no hover */
+        }
+        /* Conteúdo da Conclusão */
+        .conclusao {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: #E2F4EB; /* Fundo neutro */
+        }
+
+        .conclusao .titulo-conclusao {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+        .conclusao .caixa-texto {
+            background-color: #E2F4EB; /* Verde mais claro */
+            width: 100%;
+            max-width: 800px;
+        }
+        .conclusao .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 15px;
+            padding: 10px 0;
+        }
+
+        /* Estilo responsivo para telas menores */
+        @media (max-width: 768px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+                text-align: left;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            }
+
+        }
+        @media (max-width: 480px) {
+            .conclusao .titulo-conclusao {
+                font-size: 2.8rem;
+            }
+
+            .conclusao .caixa-texto p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-bottom: 10px;
+            } 
+        }
+        /* Conteúdo da Introdução */
+        .referencias {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            background-color: #FFF; /* Fundo neutro */
+            border-top: 5px solid #015A42;
+        }
+
+        .referencias .titulo-referencias {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 50px;
+            font-weight: lighter;
+            color: #015A42; /* Cor verde */
+            margin: 10px auto 10px auto;
+        }
+
+        .referencias .caixa-texto {
+            background-color: #FFF; /* Verde mais claro */
+            padding: 20px;
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+            overflow-wrap: break-word; /* Quebra de palavras longas */
+        }
+
+        .referencias .caixa-texto p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 19px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #000;
+            margin-bottom: 20px;
+        }
+        .referencias .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+        .referencias .caixa-texto, .conclusao .caixa-texto {
+            word-wrap: break-word;
+            overflow-wrap: anywhere;
+        }
+                /* Ajustes responsivos */
+        @media (max-width: 768px) {
+            .referencias .titulo-referencias {
+                font-size: 50px; /* Ajuste do tamanho da fonte */
+            }
+
+            .referencias .caixa-texto {
+                padding: 15px; /* Menos padding */
+                max-width: 90%; /* Ajusta o tamanho da caixa no tablet */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 16px; /* Reduz o tamanho da fonte para telas menores */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .referencias .titulo-referencias {
+                font-size: 2.8rem; /* Menor tamanho da fonte no mobile */
+            }
+
+            .referencias .caixa-texto {
+                max-width: 95%; /* Ajusta ainda mais o tamanho da caixa */
+            }
+
+            .referencias .caixa-texto p {
+                font-size: 14px; /* Reduz ainda mais o tamanho da fonte */
+            }
+        }
+
+        
+        /* Estilização do rodapé */
+        .footer {
+            border-top: 5px solid #015A42; /* Borda superior */
+            background-color: #FFFFFF; /* Fundo branco */
+            text-align: center; /* Centralizar texto */
+            padding: 15px 0; /* Espaçamento interno */
+            box-sizing: border-box; /* Inclui padding nas dimensões */
+        }
+
+        .footer p {
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #015A42; /* Cor do texto */
+            margin: 0; /* Remove espaçamento externo */
+        }
+        /* Texto descritivo */
+        .footer .fonte-menor {
+            font-family: 'Roboto', sans-serif;
+            font-size: 13px;
+            color: #555; /* Cor neutra */
+            line-height: 1.5; /* Espaçamento entre linhas */
+            display: block; /* Garante quebra para nova linha */
+            margin-top: 10px; /* Espaço entre o texto e o divisor */
+        }
+                /* Divisor */
+        .footer-divider {
+            border: none; /* Remove borda padrão */
+            height: 1px; /* Altura da linha */
+            background-color: #015A42; /* Cor da linha */
+            margin: 10px auto; /* Espaçamento vertical */
+            width: 80%; /* Define a largura do divisor */
+            opacity: 0.5; /* Reduz opacidade para suavizar */
+        }
+                /* Ajustes do rodapé para mobile */
+        @media (max-width: 480px) {
+            .footer p {
+                font-size: 15px; /* Ajusta o tamanho da fonte */
+            }
+            .footer .fonte-menor {
+                font-size: 12px; /* Reduz tamanho da fonte */
+                line-height: 1.4; /* Ajusta o espaçamento */
+            }
+            .footer-divider {
+                width: 100%; /* Ajusta largura do divisor no mobile */
+            }
+        }
+        .download-section {
+                padding: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 15px;
+            }
+            .download-btn {
+                background-color: #9F43BE;
+                color: white;
+                text-decoration: none;
+                font-size: 16px;
+                padding: 10px 15px;
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                transition: all 0.3s ease;
+                font-weight: bold;
+                margin-top: 80px;
+            }
+
+            .download-btn i {
+                font-size: 18px;
+            }
+
+            .download-btn:hover {
+                background-color: #7D3598;
+            }
+            /* Modal - Fundo escuro ao abrir a imagem */
+        .modal {
+            display: none; /* Escondido por padrão */
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Imagem no modal */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            display: block;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        /* Botão de fechar */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="https://drive.google.com/thumbnail?id=1iZTd5_tOqqVTFtrgbqdKazN1J1Yk-PuE" alt="Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="bx bx-menu"></i>
+            <i class="bx bx-x" style="display: none;"></i> <!-- Ícone de fechar menu -->
+        </div>
+        <ul>
+            <li><a href="#introducao">Introdução</a></li>
+            <li><a href="#secao1">Tópico 1</a></li>
+            <li><a href="#secao22">Tópico 2</a></li>
+            <li><a href="#secao3">Tópico 3</a></li>
+            <li><a href="#secao4">Tópico 4</a></li>
+            <li><a href="#secao5">Tópico 5</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#conclusao">Conclusão</a></li>
+            <li><a href="#referencias">Refs Bibliográficas</a></li>
+        </ul>
+    </div>
+    <!-- Título -->
+    <section id="titulo" class="titulo-intro">
+        <h1 class="titulo-programa">PROGRAMA DE ATUALIZAÇÃO</h1>
+    </section>
+    
+    <!-- Capa do Livro -->
+    <section id="capa-livro" class="capa-livro">
+        <div class="borda superior"></div>
+        <div class="conteudo-capa">
+            <h1 class="titulo-materia">LÍNGUA PORTUGUESA - NÍVEL 2</h1>
+            <h2 class="subtitulo-professor">PROFª VALÉRIA SILVA ROSA DE ALMEIDA</h2>
+        </div>
+        <div class="borda inferior"></div>
+    </section>
+    <!-- Seção Introdução -->
+    <section id="introducao" class="introducao">
+        <!-- Barra Superior -->
+        <div class="barra-superior">
+            <h1 class="titulo-barra">UNIDADE 6| AS NORMAS DA ABNT PARA APRESENTAÇÃO DE TRABALHOS ACADÊMICOS</h1>
+        </div>
+    
+        <!-- Conteúdo -->
+        <div class="conteudo-introducao">
+            <div class="caixa-texto">
+                <h1 class="titulo-introducao">INTRODUÇÃO</h1>
+                <p>Olá estudante!</p>
+                <p>
+                    A elaboração de trabalhos acadêmicos exige não apenas um aprofundamento no tema pesquisado, mas
+                    também a organização e apresentação do conteúdo conforme padrões estabelecidos. Nesse contexto,
+                    as normas da Associação Brasileira de Normas Técnicas (ABNT) desempenham um papel essencial,
+                    garantindo a uniformidade e a padronização dos textos acadêmicos. Essas diretrizes tornam a comunicação
+                    científica mais clara e objetiva, facilitando a compreensão e a disseminação do conhecimento.
+                </p>
+                <p>
+                    Além de estabelecer critérios para formatação e estruturação dos trabalhos, as normas da ABNT dividem
+                    os documentos acadêmicos em três partes fundamentais: elementos pré-textuais, textuais e pós-textuais.
+                    Cada um desses elementos tem uma função específica e contribui para a construção de um trabalho coeso
+                    e bem fundamentado. O conhecimento dessas diretrizes permite que os estudantes desenvolvam suas
+                    produções acadêmicas com mais segurança, atendendo às exigências institucionais e metodológicas.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="secao1" class="secao1">
+        <h1>
+            1. ESTRUTURA DO TRABALHO ACADÊMICO
+        </h1>
+        <p>
+            Para estruturar a apresentação de trabalhos acadêmicos, o <strong>Trabalho De Conclusão De Curso – TCC</strong>,
+            por exemplo, é necessário conhecer a normatização em vigor, isto é, a <strong>Associação Brasileira De Normas
+            Técnicas – ABNT.</strong> No entanto, é preciso estar atento às <strong>atualizações realizadas de tempos em tempos</strong>
+            para estar ciente dos padrões de normatização vigentes. <strong>Fique alerta!</strong> Essa normatização refere-se ao
+            ano de <strong></strong>2023.
+        </p>
+        <p>
+            As normas da ABNT é um critério de normatização adotado em vários países do mundo. Usadas e
+            regulamentadas no Brasil, elas têm a função de uniformizar a apresentação dos trabalhos acadêmicos – <strong>TCC</strong>, Teses de
+            Mestrado e Doutorado, de Pesquisa, Artigos Científicos – dando credibilidade a eles e
+            criando um padrão de compreensão que pode ser identificado por pesquisadores do mundo todo.
+        </p>
+        <p>
+            Vale lembrar que é essencial buscar, também, as exigências de sua universidade, informações sobre as
+            solicitações do <strong>orientador</strong> de seu curso em relação ao tema que você deseja desenvolver, já que cada
+            orientador específica algumas outras exigências obrigatórias.
+        </p>
+        <div class="small-frame">
+            <p>
+                Alguns itens são mais específicos de teses de <strong>mestrado</strong> e <strong>doutorado.</strong> Há itens que são
+                obrigatórios e outros opcionais. Em caso de dúvidas, sempre consulte seu orientador.
+            </p>
+        </div>
+        <p>
+            Qualquer projeto acadêmico regulado pelas normas ABNT conta com <strong></strong>ELEMENTOS PRÉ-TEXTUAIS,
+            TEXTUAIS e PÓS-TEXTUAIS. Esta divisão proposta pela Associação favorece a organização dos
+            escritos científicos e garante o bom entendimento dos conceitos apresentados. No entanto, vale observar
+            a <strong></strong>essencialidade dos elementos textuais. São eles que dão vida às concepções e hipóteses defendidas
+            no trabalho. Trazem à luz novos conceitos pautados em antigos e reconhecidos saberes. Cada uma das
+            partes possui sua atribuição.
+        </p>
+        <p>
+            Veja a seguir algumas normas importantes para trabalho acadêmico, segundo as regras da ABNT 2019.
+        </p>
+        <!-- Acordeons -->
+        <div class="acordeon-container">
+            <!-- Primeiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    FORMATAÇÃO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        <strong>▸</strong> Papel em branco, formato A4 (21 X 29,7cm).
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Segundo acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    FONTE
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        <strong>▸</strong> Papel em branco, formato A4 (21 X 29,7cm).
+                    </p>
+                    <p>
+                        <strong>▸</strong> Fonte (Arial ou Times New Roman) e tamanho 10 para citações com mais de três
+                        linhas, notas de rodapé, paginação, legenda e fonte das ilustrações e das tabelas;
+                    </p>
+                    <p>
+                        <strong>▸</strong> Fonte (Arial ou Times New Roman) tamanho 12 para <strong>(TÍTULO)</strong> em maiúsculo e
+                        negrito;
+                    </p>
+                    <p>
+                        <strong>▸</strong> Fonte (Arial ou Times New Roman) tamanho 12 para (subtítulo) em minúsculo.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Terceiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    ESPAÇAMENTO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        <strong>▸</strong> Espaço “Entrelinhas” do texto: 1,5 cm;
+                    </p>
+                    <p>
+                        <strong>▸</strong> O espaço simples é usado em: citações de mais de três linhas, notas de rodapé,
+                        referências, ficha catalográfica, legendas e fontes das ilustrações e tabelas;
+                    </p>
+                    <p>
+                        <strong>▸</strong> As referências devem ser separadas entre si por um espaço simples em branco.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Quarto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    PAGINAÇÃO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        <strong>▸</strong> As folhas do trabalho devem ser contadas, sequencialmente, a partir da folha de
+                        rosto e numeradas a partir da Introdução. Os números devem ser escritos em
+                        algarismos arábicos e alinhados a 2 cm da margem direita e da margem superior.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="secao2" id="secao22">
+        <h1>
+            2. ELEMENTOS PRÉ-TEXTUAIS
+        </h1>
+        <p>
+            Os elementos pré-textuais são a parte inicial do trabalho acadêmico, composta por informações que
+            identificam e introduzem a pesquisa. Eles incluem itens como capa, folha de rosto, sumário e resumo,
+            garantindo que o leitor tenha uma visão clara do conteúdo antes de iniciar a leitura do texto propriamente
+            dito. Vamos aprofundar as características de cada etapa a seguir.
+        </p>
+        <h1>
+            2.1 CAPA
+        </h1>
+        <p>
+            A capa é o primeiro elemento visual de um trabalho acadêmico e deve conter informações essenciais
+            para sua identificação. Seguir as diretrizes da ABNT para sua formatação garante uma apresentação
+            padronizada, facilitando o reconhecimento do documento no meio acadêmico. A capa deve conter:
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ O nome da Instituição de Ensino</strong> – Caracteres maiúsculos em negrito.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Curso</strong> – Caracteres maiúsculos em negrito.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Nome do Autor</strong> (você) – Caracteres maiúsculos, sem negrito.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Título</strong> do tema escolhido por você – Caracteres maiúsculos em negrito.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Subtítulo</strong>  – se houver – Somente primeiras letras em maiúsculo.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Cidade</strong>  – Caracteres maiúsculos, sem negrito.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Ano</strong>  – Sem negrito.</span></li>
+            </ul>
+        </div>
+        <h2 class="titulo-quadrov"><span class="text-greenv">Figura 1.</span> Exemplo de Capa</h2>
+        <div class="quadroimg">
+            <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744130897/smpisrvxrshdvgtbliws.png"
+                alt="Imagem vertical" onclick="openModal(this)">
+        </div>
+        <!-- Modal para exibir a imagem ampliada -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImg">
+        </div>
+        <p class="fonte-imagem">
+            <span class="text-italic"><strong>Fonte:</strong>
+                https://infograficos.gazetadopovo.com.br/educacao/normas-abnt-capa/</span>
+        </p>
+        <h1>
+            2.2 LOMBADA
+        </h1>
+        <p>
+            A lombada é um elemento opcional, utilizado em trabalhos encadernados, como dissertações e teses.
+            Sua principal função é permitir a identificação do documento quando armazenado em prateleiras, devendo
+            conter informações como o nome do autor, título do trabalho e ano de publicação.
+        </p>
+        <h1>
+            2.3 FOLHA DE ROSTO
+        </h1>
+        <p>
+            A folha de rosto complementa a capa e também é usada para a identificação do trabalho, apresentando
+            informações mais detalhadas do que as contidas na capa. Veja a seguir as principais características e
+            exemplos.
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ Nome da Instituição</strong> – Caracteres maiúsculos, sem negrito.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Nome do autor</strong> (você) – Caracteres maiúsculos, sem negrito.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Título do Trabalho</strong> – Caracteres maiúsculos em negrito.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Título</strong> do tema escolhido por você – Caracteres maiúsculos em negrito.</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Subtítulo (se houver) – Somente a primeira letra das palavras em maiúsculo, sem negritar. Deve ser evidenciado a sua subordinação ao título principal, precedido de dois pontos.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Breve descrição do trabalho que contenha os dados, objetivos</strong> – Sem negrito.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Nome do(a) Orientador(a)</strong> – Sem negrito.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Cidade</strong> – Caracteres maiúsculos, sem negrito.</span></li>
+                <li><span class="topico-destaque"><strong>▸ Ano</strong> – Sem negrito.</span></li>
+            </ul>
+        </div>
+        <!-- SLIDER 2 - IMAGENS -->
+        <div class="slider-container" id="slider2">
+            <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide('slider2')"></i>
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744162512/kenth0tbg7xvalzeweky.png" alt="slide 1" class="slider-imagem-grande" />
+                    <p class="fonte-imagem">
+                        <span class="text-italic"><strong>Fonte:</strong> 
+                            https://www.normaseregras.com/normas-abnt/folha-de-rosto/
+                        </span>
+                    </p>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744162513/xuc7uaxlbnrpe4iparbh.png" alt="slide 2" class="slider-imagem-grande" />
+                    <p class="fonte-imagem">
+                        <span class="text-italic"><strong>Fonte:</strong> 
+                            Valéria Silva Rosa de Almeida
+                        </span>
+                    </p>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744162513/b08kh7o1rpw17howrsta.png" alt="slide 3" class="slider-imagem-grande" />
+                    <p class="fonte-imagem">
+                        <span class="text-italic"><strong>Fonte:</strong>
+                            https://infograficos.gazetadopovo.com.br/educacao/normas-abnt-capa/
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide('slider2')"></i>
+        </div>
+    </section>
+    <!-- Alerta Seção -->
+    <section class="alert-section">
+        <div class="alert-container">
+            <h1 class="alert-title">ATENÇÃO!</h1>
+            <p class="alert-paragraph">
+                <strong>ERRATA</strong> – Só haverá necessidade se for preciso algum tipo de correção quando o trabalho estiver pronto
+                e para ser entregue.
+            </p>
+        </div>
+    </section>
+    <section class="secao2">
+        <h1>
+            2.4 FOLHA DE APROVAÇÃO
+        </h1>
+        <p>
+            A folha de aprovação é obrigatória em dissertações e teses e tem o propósito de registrar formalmente
+            a aceitação do trabalho pela banca examinadora. Ela inclui a data de defesa, os nomes dos membros
+            da banca e seus respectivos títulos acadêmicos, sendo um documento oficial que valida a conclusão da
+            pesquisa. Nesta folha é lançado posteriormente o resultado.
+        </p>
+        <h1>
+            2.5 DEDICATÓRIA
+        </h1>
+        <p>
+            A dedicatória é um elemento opcional que permite ao autor prestar homenagens a pessoas importantes
+            em sua trajetória acadêmica. Embora não possua regras rígidas de formatação, sua inclusão contribui
+            para a personalização do trabalho, demonstrando reconhecimento e gratidão.
+        </p>
+
+        <!-- SLIDER 1 - TEXTO -->
+        <div class="slider-container" id="slider1">
+            <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide('slider1')"></i>
+            <div class="slider">
+                <div class="slide">
+                    <span class="slide-texto">
+                        “Dedico esse trabalho, primeiramente a Deus, meu guia e protetor, ao meu pai ........ , minha mãe ......
+                        e meus irmãos ........... .”
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        “Aos meus pais ............, irmãos .........., minha esposa (meu marido) ......., minha filha(o),
+                        filhos .......... pelo apoio e carinho que compreenderam minha ausência e não mediram esforços para me
+                        incentivar e chegar até esta etapa de minha vida.”
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        “Dedico esse trabalho aos meus avós (In Memoriam) ........... e aos meus pais .............., pois sem
+                        eles, muitos dos meus sonhos não se realizariam.”
+                    </span>
+                </div>
+                <div class="slide">
+                    <img src="https://res.cloudinary.com/di4ria1pf/image/upload/v1744165732/le3zr5shwod6d98mnoui.png"
+                        alt="Imagem de encerramento" class="slide-imagem" />
+                    <p class="fonte-imagem">
+                        <span class="text-italic"><strong>Fonte:</strong> Valéria Silva Rosa de Almeida</span>
+                    </p>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide('slider1')"></i>
+        </div>
+        <h1>
+            2.6 AGRADECIMENTOS
+        </h1>
+        <p>
+            Os agradecimentos são um espaço reservado para expressar gratidão a instituições, professores, familiares
+            e amigos que contribuíram de alguma forma para a realização do trabalho, e possibilitaram ao autor chegar
+            ao final do curso. Sua estrutura segue um tom formal e objetivo
+        </p>
+        <!-- SLIDER 3 - TEXTO -->
+        <div class="slider-container" id="slider3">
+            <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide('slider3')"></i>
+            <div class="slider">
+                <div class="slide">
+                    <span class="slide-texto">
+                        “Ao Prof. e orientador ____ pela orientação paciente e as várias sugestões de grande ajuda na produção desse trabalho.”
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        “Aos amigos ____ e ____ pelo incentivo e grande ajuda com o fornecimento de material para a realização deste trabalho”
+                    </span>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        “Agradeço ao departamento de .............. pela disponibilização do material necessário para as pesquisas técnicas.”
+                    </span>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide('slider3')"></i>
+        </div>
+        <h1>
+            2.7 EPÍGRAFE
+        </h1>
+        <p>
+            A epígrafe é um elemento opcional. Neste espaço, o autor faz uma citação ou uma frase de alguém
+            famoso, relacionada ao trabalho que tenha servido de inspiração para ele. Pode ser um verso de música,
+            um trecho de um discurso ou mesmo um pensamento de célebre sobre o assunto.
+        </p>
+        <!-- SLIDER 4 - TEXTO -->
+        <div class="slider-container" id="slider4">
+            <i class="bx bx-chevron-left arrow left-arrow" onclick="prevSlide('slider4')"></i>
+            <div class="slider">
+                <div class="slide">
+                    <span class="slide-texto">
+                    “Aprender é a única coisa de que a mente nunca se cansa, nunca tem medo e nunca se arrepende”.
+                    </span>
+                    <p class="fonte-imagemr">
+                        <span class="text-italicr">
+                            (Autor Desconhecido – Revista Língua Portuguesa, n. 32, jun. 2008.
+                        </span>
+                    </p>
+                </div>
+                <div class="slide">
+                    <span class="slide-texto">
+                        “Os que se encantam com a prática sem a ciência são como os timoneiros que entram no navio sem timão nem bússola, nunca
+                        tendo certeza do seu destino”.
+                    </span>
+                    <p class="fonte-imagemr">
+                        <span class="text-italicr">
+                        (Leonardo da Vinci)
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <i class="bx bx-chevron-right arrow right-arrow" onclick="nextSlide('slider4')"></i>
+        </div>
+        <h1>
+            2.8 RESUMO
+        </h1>
+        <p>
+            O resumo é uma síntese objetiva do trabalho acadêmico, apresentando suas principais ideias, objetivos,
+            metodologia e resultados. Ele deve ser escrito em um único parágrafo, sem recuo. Deve ter de 150 à 500
+            palavras, escrito em voz ativa e na terceira pessoa do singular. Ao final, ele deve conter até 6 palavras
+            chave que identifiquem o tema e servem para indexar o trabalho.
+        </p>
+        <div class="small-frameg">
+            <h4 class="text-left">RESUMO</h4>
+            <p>
+                As exigências atuais de alfabetização reivindicam a formação de sujeitos
+                que saibam, além de ler e escrever, fazer uso competente dessas
+                habilidades de acordo com as demandas sociais. Logo, este projeto de
+                cujo tema fala sobre Alfabetização na Educação Infantil, discute essas
+                práticas apresentadas. Buscou-se conhecer a concepção dos referidos
+                educadores acerca da alfabetização de modo escrito em vez do lúdico,
+                além de analisar suas considerações em relação às próprias práticas,
+                visando favorecer o desenvolvimento desses processos. Valendo-se da
+                pesquisa qualitativa e descritiva, foram levantados os dados pertinentes
+                por meio de entrevista com uma professora que atua na educação infantil
+                explicando os métodos utilizados para alfabetizar em sala de aula.
+            </p>
+            <p>
+                <strong>Palavras-chave</strong>: alfabetização; educação infantil; práticas; lúdico; sala de aula.
+            </p>
+        </div>
+        <p class="fonte-imagem">
+            <span class="text-italic"><strong>Fonte:</strong>
+                https://infograficos.gazetadopovo.com.br/educacao/normas-abnt-capa/</span>
+        </p>
+        <h1>
+            2.9 RESUMO EM LÍNGUA ESTRANGEIRA (ABSTRACT)
+        </h1>
+        <p>
+            O abstract é a versão do resumo transcrito e traduzido para a língua estrangeira, geralmente em inglês.
+            Sua inclusão permite que o trabalho alcance um público mais amplo, facilitando a disseminação do
+            conhecimento em âmbito internacional.
+        </p>
+        <h1>
+            2.10 SUMÁRIO
+        </h1>
+        <p>
+            O sumário organiza e enumera as partes do trabalho acadêmico, listando títulos e subtítulos com suas
+            respectivas páginas. Sua estrutura hierárquica facilita a navegação pelo documento, garantindo que o
+            leitor encontre rapidamente as informações desejadas. Deve ser alinhado à esquerda, sem recuo.
+        </p>
+        <p>
+            Caso haja ilustrações, tabelas, abreviaturas e símbolos, estes devem estar devidamente listados nesta
+            sequência: <span class="text-italicu">Lista de ilustrações</span>, <span class="text-italic">Lista de tabelas, Lista de abreviaturas, Lista de Símbolos.</span>
+        </p>
+        <h1>
+            2.11 ILUSTRAÇÕES
+        </h1>
+        <p>
+            Elas compreendem quadros, gráficos, desenhos, mapas e fotografias, lâminas, plantas, retratos, organogramas,
+            fluxogramas, esquemas ou outros elementos autônomos e demonstrativos de síntese necessárias à
+            complementação e melhor visualização do texto. Devem aparecer sempre que possível na própria folha onde
+            está inserido o texto, porém, caso não seja possível, apresentar a ilustração na própria página.
+        </p>
+        <h1>
+            2.12 TABELAS
+        </h1>
+        <p>
+            As tabelas constituem uma forma adequada para apresentar dados numéricos, principalmente quando
+            compreendem valores comparativos. Consequentemente, devem ser preparadas de maneira que o leitor
+            possa entendê-las sem que seja necessária a recorrência ao texto, da mesma forma que o texto deve
+            prescindir das tabelas para sua compreensão.
+        </p>
+        <p>
+            <strong>Recomenda-se:</strong>
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>a) </strong> A tabela possui seu número independente e consecutivo;</span></li>
+                <li><span class="topico-destaque"><strong>b) </strong> O título da tabela deve ser o mais completo possível dando indicações claras e precisas a respeito do conteúdo e deve figurar acima da tabela, precedido da palavra Tabela e de seu número de ordem no texto, em algarismos arábicos;</span></li>
+                <li><span class="topico-destaque"><strong>c) </strong> Elas devem ser inseridas mais próximas possível ao texto onde foram mencionadas;</span></li>
+                <li><span class="topico-destaque"><strong>d) </strong> A indicação da fonte, responsável pelo fornecimento de dados utilizados na construção de uma tabela, deve ser sempre indicada no rodapé da mesma, precedida da palavra Fonte: após o fio de fechamento;</span></li>
+                <li><span class="topico-destaque"><strong>e) </strong> Notas eventuais e referentes aos dados da tabela devem ser colocadas também no rodapé da mesma, após o fio do fechamento;</span></li>
+                <li><span class="topico-destaque"><strong>f) </strong> Fios horizontais e verticais devem ser utilizados para separar os títulos das colunas nos cabeçalhos das tabelas, em fios horizontais para fechá-las na parte inferior. Nenhum tipo e fio devem ser utilizados para separar as colunas ou as linhas;</span></li>
+                <li><span class="topico-destaque"><strong>g) </strong> No caso de tabelas grandes e que não caibam em uma só folha, deve-se dar continuidade à mesma na folha seguinte; nesse caso, o fio horizontal de fechamento deve ser colocado apenas no final da tabela, ou seja, na folha seguinte. Nesta folha também são repetidos os títulos e o cabeçalho da tabela.</span></li>
+            </ul>
+        </div>
+    </section>
+    <section class="secao1" id="secao3">
+        <h1>
+            3. ELEMENTOS TEXTUAIS
+        </h1>
+        <p>
+            Os elementos textuais constituem o corpo do trabalho e são divididos em introdução, desenvolvimento e
+            conclusão. Essa estrutura padronizada facilita a organização das ideias e a comunicação do conteúdo de
+            forma clara e objetiva. Nesta seção, são apresentadas as ideias, hipóteses e fundamentações teóricas,
+            estruturando a argumentação e conduzindo o leitor à compreensão do tema abordado.
+        </p>
+        <h1>
+            3.1 INTRODUÇÃO
+        </h1>
+        <p>
+            Trata-se de um texto introdutório. É a seção que abre a produção acadêmica e serve para introduzir o
+            tema. Deve constar do tema tratado no trabalho, a delimitação do assunto, a justificativa, o objetivo e os
+            procedimentos adotados. É a Introdução que vai apresentar a todos o seu trabalho, por isso precisa ser
+            escrita com clareza e objetividade. Ao ler a Introdução, o interlocutor (leitor) deve compreender de que
+            trata o projeto, como foi desenvolvido o trabalho e quais objetivos são pretendidos. Para simplificar a
+            escrita, você pode orientar-se pelos seguintes tópicos clicando nos títulos a seguir.
+        </p>
+        <!-- Acordeons -->
+        <div class="acordeon-container">
+            <!-- Primeiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    APRESENTAÇÃO CONTEXTUALIZADA
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        <strong>1º-</strong> Exponha uma <strong>apresentação contextualizada</strong> de seu tema, isto é, o que você pretende
+                        deve ser apresentado ao leitor através de um pequeno texto, claro e coeso. Você precisa
+                        fazer com que o leitor perceba que ideia seu trabalho defende.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Segundo acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    DELIMITE O ASSUNTO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        <strong>2º-</strong> <strong>Delimite o assunto</strong>, ou seja, o ponto a ser tratado precisa ser bem especificado. Um
+                        assunto muito amplo impossibilitará e dificultará demais a investigação e a pesquisa.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Terceiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    JUSTIFICATIVA
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        <strong>3º- Justificativa.</strong> Fica fácil se usar as perguntas:
+                    </p>
+                    <p>
+                        <strong>▸</strong> Por que escolhi este tema?
+                    </p>
+                    <p>
+                        <strong>▸</strong> Para que estou levantando estas ideias?
+                    </p>
+                    <p>
+                        <strong>▸</strong> O que me levou a trabalhar este assunto?
+                    </p>
+                    <p>
+                        <strong>▸</strong> Aqui você deverá convencer sobre a importância de seu assunto.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Quarto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    PROBLEMA
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        <strong>4°-</strong> Informe qual é o <strong>problema</strong> de sua pesquisa. Qual a questão que será respondida na
+                        conclusão do trabalho.
+                    </p>
+                </div>
+            </div>
+            <!-- Quinto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    OBJETIVOS
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        <strong>5º-</strong> Informe seus Objetivos:
+                    </p>
+                    <p>
+                        <strong>▸ Geral –</strong> Problema que você quer resolver, associado a um verbo (avaliar,
+                        investigar, analisar, identificar etc.).
+                    </p>
+                    <p>
+                        <strong>▸ Específicos –</strong> São constituídos pelas etapas que levarão a alcançar o objetivo geral.
+                    </p>
+                    <p>
+                        <strong>
+                            EXEMPLO:
+                        </strong>
+                    </p>
+                    <p>
+                        ANÁLISE DA ALTA EVASÃO ESCOLAR DO ENSINO MÉDIO NO COLÉGIO FREI
+                        AGOSTINHO
+                    </p>
+                    <p>
+                        <strong>Objetivo Geral –</strong> Analisar o motivo da Evasão Escolar dos alunos do Ensino Médio no
+                        Colégio Frei Agostinho.
+                    </p>
+                    <p>
+                        <strong>
+                            Objetivos Específicos:
+                        </strong>
+                    </p>
+                    <p>
+                        <strong>▸ </strong> Pesquisar o cotidiano dos alunos.
+                    </p>
+                    <p>
+                        <strong>▸ </strong> Analisar o convívio e o relacionamento entre alunos-professores; Colégio - alunos.
+                    </p>
+                    <p>
+                        <strong>▸ </strong> Verificar a participação da família na vida escolar dos alunos.
+                    </p>
+                    <p>
+                        <strong>▸ </strong> Observar o que o Colégio tem a oferecer para os alunos.
+                    </p>
+                    <p>
+                        <strong>▸ </strong> Refletir sobre os prováveis problemas que impedem a frequência.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <h1>
+            3.2 DESENVOLVIMENTO
+        </h1>
+        <p>
+            É o corpo do trabalho, a parte principal onde as ideias serão expostas e desenvolvidas, de uma forma
+            ordenada do assunto. Ao definir seus objetivos específicos, você pode usá-los como roteiro para escrever o
+            Desenvolvimento. Desta forma, cada capítulo do texto, devidamente numerado e assim separado, será melhor
+            visualizado e bem entendido. Pode ser referente a um desses objetivos já traçados e que serão pesquisados.
+        </p>
+        <h1>
+            3.3 CONCLUSÃO
+        </h1>
+        <p>
+            Finalização de todo o estudo. O tema tratado é concluído e os resultados, apresentados, avaliando a
+            contribuição e os méritos do trabalho, da pesquisa. Este item faz o fechamento, respondendo às questões
+            e concluindo as ideias. É onde o autor faz uma recapitulação sintética do assunto. O autor pode também
+            levantar hipóteses, refletir sobre cada objetivo proposto e recomendar novas pesquisas sobre o assunto.
+            A conclusão apresentará o resumo de tudo que foi produzido. É interessante colocar argumentos que
+            mostrem quais objetivos foram atingidos, quais não foram e o porquê.
+        </p>
+        <h1>
+            3.4 LINGUAGEM
+        </h1>
+        <p>
+            Tendo em vista que o <strong>Trabalho de Conclusão de Curso</strong>, o artigo etc. se caracteriza por ser um trabalho
+            extremamente sucinto, exige-se que tenha algumas qualidades: linguagem correta e precisa, coerência
+            na argumentação, clareza na exposição das ideias, objetividade, concisão e fidelidade às fontes citadas.
+            Para que essas qualidades se manifestem é necessário, principalmente, que o autor tenha um certo
+            conhecimento a respeito do que está escrevendo.
+        </p>
+        <p>
+            A linguagem deve abranger:
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ </strong>Impessoalidade: redigir o trabalho na 3ª pessoa do singular.</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Objetividade: a linguagem objetiva deve afastar as expressões: “eu penso”, “eu acho”, “na minha opinião” que dão margem a interpretações simplórias e sem valor científico.</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>A linguagem é informativa, de ordem racional, firmada em dados concretos, onde pode-se apresentar argumentos de ordem subjetiva, porém dentro de um ponto de vista científico.</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Vocabulário técnico: a linguagem científica serve-se do vocabulário comum, utilizado com clareza e precisão, mas cada <strong>ramo da ciência possui uma terminologia técnica própria que deve ser observada.</strong></span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>A <strong>correção gramatical</strong> é indispensável. Deve-se procurar relatar a pesquisa em frases curtas, evitando muitas orações subordinadas (que), intercaladas com parênteses, num único período. Se necessário, use o travessão e não os parênteses. O uso de parágrafos deve ser dosado na medida necessária para articular o raciocínio: toda vez que se dá um passo a mais no desenvolvimento do raciocínio, muda-se o parágrafo. O uso de <strong>organizadores textuais</strong> é essencial. .</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Os recursos ilustrativos como gráficos estatísticos, desenhos, tabelas são considerados como figuras e devem ser criteriosamente distribuídos no texto, tendo suas fontes citadas em notas de rodapé (Pádua, 1996, p. 82).</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Para a <strong>redação</strong> ser bem concisa e clara, não se deve seguir o ritmo comum do nosso pensamento, que geralmente se baseia na associação livre de ideias e imagens. Assim, ao explanar as ideias de modo coerente, se fazem necessários cortes e adições de palavras ou frases <strong>(organizadores textuais).</strong></span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>A estrutura da redação assemelha-se a um esqueleto, constituído de vértebras interligadas entre si. O parágrafo é a unidade que se desenvolve uma ideia central que se encontra ligada às ideias secundárias devido ao mesmo sentido. Deste modo, quando se muda de assunto, muda-se de parágrafo. Um parágrafo segue a mesma circularidade lógica de toda a redação: introdução, desenvolvimento e conclusão.</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Convém iniciar cada parágrafo através do tópico frasal ou frase-núcleo (oração principal), onde se expressa a ideia predominante. Por sua vez, esta é desdobrada pelas ideias secundárias; todavia, no final, ela deve aparecer mais uma vez. Assim, o que caracteriza um parágrafo é a unidade (uma só ideia principal), a coerência (articulação entre as ideias) e a ênfase (volta à ideia principal). (Lembre-se do semestre passado – <strong>Paragrafação</strong>).</span></li>
+                <li><span class="topico-destaque"><strong>▸ </strong>Antes de iniciar a redação, o autor (você) precisa ter assimilado o assunto em todas as suas dimensões, no seu todo como em cada uma de suas partes. Faça um <strong>PLANO DE TEXTO</strong>, já comentado em unidades anteriores.</span></li>
+                <li><span class="topico-destaque"><strong>▸ CITAÇÕES¹</strong></span></li>
+                <li><span class="topico-destaque">Menção de uma informação extraída de outra fonte.</span></li>
+            </ul>
+        </div>
+        <div class="referencia">
+            <div class="linha-curta"></div>
+            <p><sup>1</sup><strong>NBR 10520:</strong> Informação e documentação: Citações em documentos - Apresentação</p>
+        </div>
+        <h1>
+            3.4.1 AS CITAÇÕES
+        </h1>
+        <p>
+            Nas citações, as chamadas são feitas pelo sobrenome do autor, instituição responsável ou título na
+            sentença, em letras maiúsculas e minúsculas. São colocadas durante a parte de <strong>desenvolvimento</strong> (Corpo
+            do texto). Elas podem ser:
+        </p>
+        <!-- Acordeons -->
+        <div class="acordeon-container">
+            <!-- Primeiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    CITAÇÕES DIRETAS
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        Cópia feita de maneira integral, idêntica ao texto original. Nesse caso, deve-se citar o
+                        <strong>sobrenome do autor, ano de publicação da obra e página da citação (caso a citação
+                        seja retirada de um e-book e não tenha paginação, é citado a localização do trecho,
+                        como por exemplo: local 46)</strong>, de onde o trecho foi extraído entre parênteses e após a
+                        data, separados por vírgula.
+                    </p>
+                    <p>
+                        <span class="centralizado">Exemplos</span>
+                    </p>
+                    <p>
+                        “O drama romântico lembra e muito, as atuais novelas de televisão que se nutrem de
+                        situações de choque, intermeadas de uma certa calma e mesmice [...]” (Citelli, 1986, p. 41).
+                    </p>
+                    <p>
+                        <span class="centralizado">OU</span>
+                    </p>
+                    <p>
+                        Segundo Citelli (1986, p. 41) “O drama romântico lembra e muito, as atuais novelas de
+                        televisão que se nutrem de situações de choque, intermeadas de uma certa calma e
+                        mesmice [...]”.
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Segundo acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    CITAÇÕES DIRETAS COM MENOS OU ATÉ 3 LINHAS
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        <strong>Citações Diretas com menos ou até 3 linhas</strong> são feitas no corpo do texto, entre aspas
+                        duplas com (o último) sobrenome do autor, a data e a página.
+                    </p>
+                    <p>
+                        <span class="centralizado">Exemplos</span>
+                    </p>
+                    <p>
+                        Em suma, “a fidelidade alcança-se muito menos pela tradução literal do que por uma
+                        substituição contínua. A arte do tradutor consiste justamente em saber quando pode verter
+                        e quando deve procurar equivalências” (Rónai, 2012, p. 24).
+                    </p>
+                    <p>
+                        <span class="centralizado">OU</span>
+                    </p>
+                    <p>
+                        Segundo Rónai (2012, p. 21), “pensa-se geralmente que a tradução fiel é a tradução
+                        literal, e que, portanto, qualquer tradução que não seja literal é livre”.
+                    </p>
+                    <p>
+                        Você pode também utilizar de outras expressões usadas para mencionar o nome do autor.
+                        Interessante é diversificar. Nesse caso, verifique a <strong>VÍRGULA</strong>, após o parênteses.
+                    </p>
+                    <p>
+                        - De acordo com ...... (ano ..., p. ....), “ .....”.
+                    </p>
+                    <p>
+                        - Para ...... (ano ..., p. ....), “ ....”.
+                    </p>
+                    <p>
+                        - Conforme ..... (ano ...., p. ....), “....”.
+                    </p>
+                    <p>
+                        - ....... (ano ..., p. ....) afirma/ declara/ esclarece que ......”.....”. <strong>SEM VÍRGULA</strong> (não se
+                        separa o sujeito do verbo por vírgula).
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Terceiro acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    CITAÇÕES DIRETAS COM MAIS DE 3 LINHAS
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        <strong>Citações Diretas com mais de 3 linhas</strong>, devem ser destacadas do texto com recuo de 4
+                        cm da margem esquerda, sem aspas, com fonte menor que a do texto utilizado (tamanho
+                        10) com espaçamento simples entre linhas (1,0).
+                    </p>
+                    <p>
+                        <span class="centralizado">Exemplo</span>
+                    </p>
+                    <p>
+                        A teleconferência permite ao indivíduo participar de um encontro nacional
+                        ou regional sem a necessidade de deixar seu local de origem. Tipos comuns
+                        de teleconferências incluem o uso da televisão, telefone e computador.
+                        Através de áudio-conferência, utilizando a companhia local de telefone,
+                        um sinal de áudio pode ser emitido em um salão de qualquer dimensão
+                        (Nichols, 1993, p. 181).
+                    </p>
+                </div>
+            </div>
+        
+            <!-- Quarto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    CITAÇÕES INDIRETAS
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        Elas reproduzem ideias da fonte consultada (texto original), sem transcrever as palavras
+                        do texto, ou seja, o trecho é reescrito com as palavras do autor do trabalho acadêmico
+                        (você), mas mantendo o sentido. Devem citar o sobrenome do autor (o último) e o ano
+                        da publicação, entre parênteses e separados por vírgula. Não se coloca a página porque
+                        não é uma “cópia” do texto original. É você que está reescrevendo. Observe a <strong>VÍRGULA</strong>,
+                        depois dos parênteses.
+                    </p>
+                    <p>
+                        <span class="centralizado">Exemplo</span>
+                    </p>
+                    <p>
+                        De acordo com Mattar (1996), a pesquisa bibliográfica é apropriada para os primeiros
+                        estágios da investigação quando a familiaridade, o conhecimento.
+                    </p>
+                    <p>
+                        As citações de mais de um autor serão feitas com a indicação do sobrenome dos dois
+                        autores, separados pelo símbolo de vírgula fora do parênteses e ponto e vírgula dentro.
+                    </p>
+                    <p>
+                        <span class="centralizado">Exemplo</span>
+                    </p>
+                    <p>
+                        Siqueland, Delucia (1990, p. 30) afirmam que “o método as solução dos problemas na
+                        avaliação ensino-aprendizagem apontam para um desenvolvimento cognitivo”.
+                    </p>
+                    <p>
+                        <span class="centralizado">OU</span>
+                    </p>
+                    <p>
+                        O método as solução dos problemas na avaliação ensino-aprendizagem apontam para
+                        um desenvolvimento cognitivo (Siquelend; Delucia, 1990).
+                    </p>
+                </div>
+            </div>
+            <!-- Quinto acordeon -->
+            <div class="acordeon">
+                <div class="acordeon-header">
+                    CITAÇÃO DE CITAÇÃO
+                    <i class="bx bx-chevron-down acordeon-icon"></i>
+                </div>
+                <div class="acordeon-content">
+                    <p>
+                        Deve ser indicada pelo sobrenome do autor seguido da expressão latina apud (citado por)
+                        em itálico e do sobrenome da obra consultada, em minúsculas. Há várias formas:
+                    </p>
+                    <p>
+                        <strong>1.</strong> Incluir os autores referenciados e o apud no começo da citação.
+                    </p>
+                    <p>
+                        <span class="centralizado">Exemplo</span>
+                    </p>
+                    <p>
+                        De acordo com Gough (1972, p. 59, <strong>apud Nardi, 1993, p. 94</strong>), “o ato de ler envolve um
+                        processamento serial que começa com uma fixação ocular sobre o texto, prosseguindo da
+                        esquerda para a direita de forma linear”.
+                    </p>
+                    <p>
+                        <strong>2.</strong> Incluir o <strong>apud</strong> no final da frase.
+                    </p>
+                    <p>
+                        <span class="centralizado">Exemplo</span>
+                    </p>
+                    <p>
+                        Segundo Gough (1972, p. 59), “o ato de ler envolve um processamento serial que começa
+                        com uma fixação ocular sobre o texto, prosseguindo da esquerda para a direita de forma
+                        linear” <strong>(apud Nardi, 1993, p. 94).</strong>
+                    </p>
+                    <p>
+                        <strong>3.</strong> Dispensa a utilização do termo <strong>apud</strong>, usando o seu significado em língua portuguesa,
+                        mas continua indicando que se trata de uma citação de citação.
+                    </p>
+                    <p>
+                        <span class="centralizado">Exemplo</span>
+                    </p>
+                    <p>
+                        Conforme Gough (1972, p. 59), citado por Nardi (1993, p. 94) “o ato de ler envolve um
+                        processamento serial que começa com uma fixação ocular sobre o texto, prosseguindo da
+                        esquerda para a direita de forma linear.”
+                    </p>
+                    <p>
+                        <strong>ATENÇÃO:</strong> Apud e et al. não devem aparecer em negrito. Eu coloquei em negrito apenas
+                        para chamar a sua atenção.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Neste vídeo, você descobrirá estratégias essenciais para elaborar as citações.
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/-3GQ9-z9-vU?si=y-N_TSqUaj-2nEpr"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="secao1" id="secao4">
+        <h1>
+            4. ELEMENTOS PÓS-TEXTUAIS
+        </h1>
+        <p>
+            Os elementos pós-textuais complementam o trabalho, reunindo informações que auxiliam na fundamentação
+            e na organização da pesquisa. Entre eles, estão as referências, anexos, apêndices e glossário, que
+            fornecem suporte adicional ao conteúdo desenvolvido no trabalho acadêmico.
+        </p>
+        <h1>
+            4.1 REFERÊNCIAS
+        </h1>
+        <p>
+            Item obrigatório em qualquer obra acadêmica e têm a função de listar todas as fontes utilizadas na
+            pesquisa. A lista é organizada em ordem alfabética pelo sobrenome do autor da obra, onde encontram
+            se os títulos dos documentos e livros consultados para a criação do TRABALHO ACADÊMICO. A correta
+            indicação das referências demonstra respeito à autoria e integridade acadêmica. Devem ser separadas
+            umas das outras com espaçamento duplo.
+        </p>
+        <p>
+            Lembrando que é necessário a padronização, você pode optar por citar o nome completo do autor ou
+            apenas as iniciais, após o sobrenome em maiúsculo, desde que todas as referências estejam com o
+            mesmo estilo.
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ Livros: </strong>Sobrenome do autor em letras maiúsculas, nome do autor, título em negrito, edição (sem ser a primeira), cidade, editora e ano de publicação:</span></li>
+            </ul>
+        </div>
+        <p>
+            BOSI, Alfredo. História Concisa da Literatura Brasileira. 38. ed. São Paulo: Cultrix, 1994.
+        </p>
+        <p>
+            MACAMBIRA, José Rebouças. A Estrutura Morfo-Sintática do Português. (OU A estrutura morfo-sintática
+            do português). São Paulo: Pioneira, 2001.
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ Obras do mesmo autor:</strong></span></li>
+            </ul>
+        </div>
+        <p>
+            FREYRE, Gilberto. <strong>Casa Grande & Senzala</strong>: formação da família brasileira sob regime de economia
+            patriarcal. Rio de Janeiro: J. Olympio, 1943.
+        </p>
+        <p>
+            ______________. <strong>Sobrados e mucambos</strong>: decadência do patriarcado rural no Brasil. São Paulo: Ed.
+            Nacional, 1936.
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ Com dois autores:</strong></span></li>
+            </ul>
+        </div>
+        <p>
+            KOCH, Ingedore Grunfeld Villaça; TRAVAGLIA, Luiz Carlos. <strong>Texto e coerência.</strong> 7. ed. São Paulo: Cortez, 2000.
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ Em latim – Apud:</strong> significa “citado por”. Deve ser colocado em itálico quando você usar o texto de um autor que aparece no trabalho de outro. Você consultou a obra de João Silva, que citou Carlos Vieira (Vieira, 2000 apud Silva, 2001). Et al. significa “e outros”. Referências com mais de três autores devem trazer o sobrenome do primeiro autor, seguido pela expressão “et al.” em itálico.</span></li>
+                <li><span class="topico-destaque"><strong>▸ IN. >>>> Quando o conteúdo utilizado na pesquisa é apenas um capítulo, utiliza-se IN para mostrar onde o texto foi retirado. Além disso, é necessário colocar em negrito o nome da obra, e não apenas o capítulo utilizado.</strong> COSTA, M. C. C. A leitura de imagens. In: ZILBERMAN, R.; ROSING, T. M. K. (Orgs.). <strong>Escola e leitura:</strong> velha crise, novas alternativas. São Paulo: Global Editora, 2009. p. 81-98.</span></li>
+                <li><span class="topico-destaque"><strong>▸ NOTAS DE RODAPÉ:</strong> fonte tamanho 10 e espaçamento simples. Elas se destinam a prestar esclarecimentos, tecer considerações, que não devem ser incluídas no texto, para não interromper a sequência lógica da leitura. Referem-se aos comentários e/ou observações pessoais do autor e são utilizadas para indicar dados relativos à comunicação pessoal. Elas devem ser reduzidas ao mínimo e situar em local tão próximo quanto possível ao texto. Para fazer a chamada das notas de rodapé, usam-se os algarismos arábicos, na entrelinha superior sem parênteses, com numeração progressiva nas folhas. <strong>Exemplo:</strong></span></li>
+            </ul>
+        </div>
+        <div class="small-frameg">
+            <div class="referencia">
+                <div class="linha-curta"></div>
+                <p><sup>1</sup>SANTOS, G. C. <strong>Manual de organização de referências e citações bibliográficas para documentos impressos e eletrônicos.</strong> Campinas: Autores Associados, 2000.</p>
+            </div>
+        </div>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ Em meio eletrônico:</strong> As referências devem obedecer aos padrões indicados para partes da monografia, acrescidas das informações relativas à descrição física do meio eletrônico (disquetes – CD-ROM, online etc.). Quando se tratar de obras consultadas online, deve ser precedido da expressão Disponível em: e a data de acesso ao documento, precedida também da expressão Acesso em: opcionalmente acrescida dos dados referentes a horas, minutos e segundos. É importante lembrar que não se recomenda referenciar material eletrônico de curta duração nas redes.</span></li>
+            </ul>
+        </div>
+        <p class="referenciap">
+            SIMPSON, Pablo. Tem um pouco de navio negreiro embaixo de cada viaduto. Jornal da Unesp, 2023.
+            Disponível em: https://jornal.unesp.br/2023/11/20/tem-um-pouco-de-navio-negreiro-embaixo-de-cada
+            viaduto/. Acesso em: 28 fev. 2025.
+        </p>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ </strong> Outros exemplos no meio eletrônico:</span></li>
+            </ul>
+        </div>
+        <p>
+            MORFOLOGIA dos artrópodos. In: <strong>ENCICLOPÉDIA multimídia dos seres vivos</strong> [S. I.]: Planeta DeAgostini,
+            1998. CD-ROM 9.
+        </p>
+        <p class="referenciap">
+            POLÍTICA. In: <strong>DICIONÁRIO da língua portuguesa.</strong> Lisboa: Priberam Informática, 1998. Disponível em:
+            https://dicionario.priberam.org/pol%C3%ADtica. Acesso em: 8 mar. 1999.
+        </p>
+        <p class="referenciap">
+            GOVERNO DO ESTADO DE SÃO PAULO. Secretaria do Meio Ambiente.
+            <strong>Tratados e Organizações Internacionais em matéria de Meio Ambiente.</strong>
+            2. ed. São Paulo: Secretaria do Meio Ambiente, 1997. Disponível em:
+            https://acervo.socioambiental.org/sites/default/files/documents/S7D00025.pdf. Acesso em: 28 fev. 2025.
+        </p>
+        <p>
+            <strong>Atenção:</strong> consulte também a Norma Brasileira de AGO 2002 – NBR 6023.
+        </p>
+    </section>
+    <section class="outer-background">
+        <!-- Seção Saiba Mais - Retângulo de Fundo -->
+        <section class="background-section">
+            <!-- Círculo Verde -->
+            <div class="circle-green">
+                <!-- Círculo Branco com ícone -->
+                <div class="circle-white">
+                    <i class='bx bx-book-reader'></i>
+                </div>
+            </div>
+            <div class="transparent-section">
+                <h1 class="learn-more-title">SAIBA MAIS</h1>
+                <p class="learn-more-paragraph">
+                    Acesse o vídeo para um primeiro contato sobre a orientação de Referências para
+                    trabalhos acadêmicos
+                </p>
+                <!-- Ícone de Play -->
+                <div class="play-icon" data-video="https://www.youtube.com/embed/jaNC18ojQO0?si=MzLVTvrZE_bTvmey"
+                    onclick="openVideoModal(this)">
+                    <i class='bx bx-play-circle'></i>
+                </div>
+            </div>
+            <!-- Modal com o vídeo -->
+            <div id="videoModal" class="video-modal" onclick="closeVideoModal()">
+                <div class="video-content" onclick="event.stopPropagation()">
+                    <i class="bx bxs-x-circle close-btn" onclick="closeVideoModal()"></i>
+                    <iframe id="videoIframe" width="800" height="450" src="" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="secao1">
+        <h1>
+            4.2 ANEXOS
+        </h1>
+        <p>
+            Os anexos são documentos agregados à obra para fins de comprovação de dados ou ilustração. Não é
+            elaborado pelo autor. São documentos para fundamentar ou ilustrar ideias. Letra maiúscula, travessão e título.
+        </p>
+        <h1>
+            4.3 GLOSSÁRIO
+        </h1>
+        <p>
+            O glossário é um elemento opcional que reúne termos técnicos ou expressões específicas do tema abordado,
+            acompanhados de suas definições. Sua função é facilitar a compreensão do leitor, especialmente quando
+            o trabalho trata de assuntos especializados ou utiliza uma terminologia pouco conhecida.
+        </p>
+        <h1>
+            4.4 APÊNDICE
+        </h1>
+        <p>
+            Diferente dos anexos, o apêndice contém materiais produzidos pelo próprio autor para complementar a
+            pesquisa, como questionários, entrevistas e tabelas de dados coletados. A sua inclusão permite apresentar
+            informações detalhadas que auxiliam na fundamentação dos resultados sem sobrecarregar o corpo do
+            texto, e também é um elemento opcional. Letra maiúscula, travessão e título.
+        </p>
+        <h1>
+            4.5 ÍNDICE
+        </h1>
+        <p>
+            O índice é um elemento opcional que facilita a localização de temas ou palavras-chave dentro do trabalho.
+            Ele é especialmente útil em documentos extensos, pois permite que o leitor encontre rapidamente as
+            informações desejadas sem precisar percorrer todo o conteúdo.
+        </p>
+    </section>
+    <section class="secao2" id="secao5">
+        <h1>
+            5. REVISANDO A FORMATAÇÃO – ABNT
+        </h1>
+        <div class="topico-texto">
+            <ul>
+                <li><span class="topico-destaque"><strong>▸ PAPEL -</strong> A4 – Cor branca.</span></li>
+                <li><span class="topico-destaque"><strong>▸ FONTE -</strong> Times New Roman ou Arial – tamanho 12 – Cor preta.</span></li>
+                <li><span class="topico-destaque"><strong>▸ TÍTULOS -</strong> Times New Roman ou Arial – tamanho 14.</span></li>
+                <li><span class="topico-destaque"><strong>▸ NUMERAÇÃO DAS PÁGINAS -</strong> Feita a partir da Folha de Rosto, mas só aparece <strong>a partir da introdução.</strong> Em algarismos arábicos, no campo superior direito da folha, a 2 cm da borda superior.</span></li>
+                <li><span class="topico-destaque"><strong>▸ ITÁLICO -</strong> Deve ser usado nas palavras de outros idiomas e nas expressões apud e et al.</span></li>
+                <li><span class="topico-destaque"><strong>▸ MARGENS -</strong> Direita e inferior: 2 cm // Esquerda e superior: 3 cm.</span></li>
+                <li><span class="topico-destaque"><strong>▸ PARÁGRAFOS / ESPAÇAMENTOS</strong> 1,5 entre linhas.</span></li>
+                <li><span class="topico-destaque"><strong>▸ ALINHAMENTO</strong> O texto deve estar <strong>justificado</strong> para que fique alinhado às margens esquerda e direita. Esta formatação revela uma aparência mais organizada e o escrito fica melhor distribuído.</span></li>
+                <li><span class="topico-destaque"><strong>▸ REFERÊNCIAS</strong> Conjunto de elementos que permitem a identificação, no todo ou em parte, de documentos impressos ou registrados em diferentes tipos de materiais. As publicações devem ser mencionadas no texto do trabalho, com menos detalhes e no final com a palavra REFERÊNCIAS em folha separada, e não na continuação do final do trabalho. Devem obedecer às Normas da ABNT.</span></li>
+            </ul>
+        </div>
+        <p>
+            Todos sabemos que escrever um TCC é uma tarefa bastante árdua, ela demanda tempo e principalmente
+            atenção, mas não é tão difícil fazê-lo. Leia atentamente seu texto, revise-o várias vezes tanto na <strong>elaboração
+            do conteúdo</strong> como na <strong>correção gramatical.</strong> Ultimamente algo bastante grave tem acontecido, os alunos
+            estão entregando os seus trabalhos com vários erros gramaticais. E isso acaba levando o aluno a perder
+            pontos em sua avaliação.
+        </p>
+        <p>
+            É essencial na produção do conteúdo de seu <strong>TCC</strong>, cuidar da NORMA-PADRÃO CULTA vigente DA LÍNGUA
+            PORTUGUESA – ortografia, pontuação, acentuação, concordância, como também na estruturação dos
+            parágrafos, coesão e coerência textuais. O que quer dizer “vigente”? Com o ACORDO ORTOGRÁFICO
+            DA LÍNGUA PORTUGUESA, algumas modificações foram realizadas e deve-se obedecê-las. Alguns
+            problemas são básicos, comuns, importantes na produção de seu <strong>TCC</strong>, mas que você <strong>NÃO</strong> pode cometer
+            porque <strong>dificulta a qualidade e a fluência da escrita.</strong>
+        </p>
+        <p>
+            Atente-se para erros comuns na escrita, como falhas de digitação e troca indevida entre letras maiúsculas
+            e minúsculas. Além disso, é fundamental diferenciar corretamente palavras e expressões frequentemente
+            confundidas, como “mas” e “mais”, “por que”, “por quê”, “porque” e “o porquê”, além de “afim” e “a fim de”.
+            Também é preciso observar o uso adequado de “haver” e “a ver”, “senão” e “se não”, “há” e “a”, “haja”
+            e “aja”, bem como evitar o uso excessivo da palavra “que”. Esses e outros cuidados gramaticais são
+            essenciais para garantir a clareza e a precisão do seu texto. Por fim, organize-se com antecedência, pois
+            seu orientador certamente solicitará um cronograma. Segui-lo corretamente ajudará a evitar contratempos
+            e garantir a entrega do trabalho dentro do prazo.
+        </p>
+    </section>
+    <!-- Seção Conclusão -->
+    <section id="conclusao" class="conclusao">
+        <!-- Conteúdo -->
+        <div class="conteudo-conclusao">
+            <div class="caixa-texto">
+                <h1 class="titulo-conclusao">CONCLUSÃO</h1>
+                <p>
+                    O domínio das normas da ABNT é indispensável para a produção acadêmica, pois garante a organização
+                    e a credibilidade dos trabalhos científicos. Ao seguir essas diretrizes, o estudante não apenas atende aos
+                    requisitos formais exigidos pelas instituições de ensino, mas também contribui para a padronização e a
+                    qualidade da produção acadêmica nacional. A correta estruturação dos elementos pré-textuais, textuais
+                    e pós-textuais facilita a leitura e a análise dos conteúdos, promovendo uma comunicação mais eficiente
+                    entre pesquisadores e leitores.
+                </p>
+                <p>
+                    Mais do que um requisito burocrático, a padronização dos trabalhos acadêmicos reflete o compromisso
+                    com a clareza, a coerência e a seriedade na construção do conhecimento. Ao compreender e aplicar
+                    corretamente as normas da ABNT, o estudante aprimora sua escrita acadêmica e desenvolve habilidades
+                    essenciais para a vida acadêmica e profissional. Portanto, estar atento a essas diretrizes não é apenas
+                    uma exigência institucional, mas um diferencial na formação acadêmica.
+                </p>
+    
+            </div>
+        </div>
+        <div id="download" class="download-section">
+            <a href="" class="download-btn">
+                Baixar PDF <i class="fas fa-download"></i> <!-- Ícone de download -->
+            </a>
+        </div>
+    </section>
+    <!-- Seção Referências-->
+    <section id="referencias" class="referencias">
+        <div class="conteudo-referencias">
+            <div class="caixa-texto">
+                <h1 class="titulo-referencias">REFERÊNCIAS</h1>
+                <p>
+                    BASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS (ABNT). <strong>Normas ABNT sobre documentação.</strong>
+                    Rio de Janeiro: ABNT, 2000. (Coletânea de normas).
+                </p>
+                <p>
+                    FRANÇA, Júnia Lessa et al. <strong>Manual para normalização de publicações técnico-científicas.</strong> 6. ed., rev.
+                    e aum. Belo Horizonte: Ed. da UFMG, 2003.
+                </p>
+                <p>
+                    MÜLLER, Mary Stela; CORNELSEN, Julce. <strong>Normas e Padrões para teses, dissertações e monografias.</strong>
+                    5. ed. Londrina: Eduel, 2003.<br>
+                    http://www.revisaoetraducao.com.br/citacao-direta-e-indireta-como-fazer/
+                </p>
+                <p>
+                    NORMAS ABNT 2023 - Regras para TCC e Monografias (ATUALIZADAS). Normas e Regras, [s. d.].
+                    Disponível em: https://www.normaseregras.com/normas-abnt/. Acesso em: 27 fev. 2025.
+                </p>
+                <p>
+                    INFOGRÁFICOS. Guia da Monografia, [s. d.]. Disponível em: https://guiadamonografia.com.br/infograficos/.
+                    Acesso em: 27 fev. 2025.<br>
+                    https://www.google.com.br/search?q=infogr%C3%A1ficos+da+ABNT&tbm=isch&source=iu&ictx=1&fir=7BI70vEjkVG2sM%253A%252Cv0n-Q8E8qh0rKM%252C_&vet=1&u
+                </p>
+                <p>
+                    Clarides Henrich de Barba - Mestre em Filosofia pela Universidade Federal de Santa Maria- UFSM e Prof.
+                    Adjunto do Departamento de Sociologia/Filosofia da Fundação Universidade Federal de Rondônia- UNIR.
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Copyright © de Universidade São Francisco</p>
+        <hr class="footer-divider">
+        <span class="fonte-menor">Todos os direitos reservados. Este ebook ou
+            qualquer parte dele não pode ser reproduzido ou usado em quaisquer formas (eletrônico,
+            gravação, fotocópia, distribuição pela Internet ou outros) sem autorização
+            expressa, por escrito, da <strong>Universidade São Francisco.</strong></span>
+    </footer>
+    <script>
+        // Navbar
+            document.querySelector('.menu-toggle').addEventListener('click', () => {
+                const menu = document.querySelector('.navbar ul');
+                const icons = document.querySelectorAll('.menu-toggle i'); // Seleciona ambos os ícones
+
+                menu.classList.toggle('show'); // Alterna a visibilidade do menu
+
+                // Alterna entre o ícone de abrir (menu) e o ícone de fechar (x)
+                icons[0].style.display = icons[0].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de menu
+                icons[1].style.display = icons[1].style.display === 'none' ? 'block' : 'none'; // Mostra ou esconde o ícone de fechar
+            });
+            // Fechar o menu ao clicar em um link
+            const links = document.querySelectorAll('.navbar ul li a');
+            links.forEach(link => {
+                link.addEventListener('click', () => {
+                    const menu = document.querySelector('.navbar ul');
+                    const icons = document.querySelectorAll('.menu-toggle i');
+
+                    // Fecha o menu ao clicar no link
+                    menu.classList.remove('show');
+                    icons[0].style.display = 'block'; // Exibe o ícone de menu
+                    icons[1].style.display = 'none'; // Esconde o ícone de fechar
+                });
+            });
+            // Captura o elemento navbar
+            const navbar = document.querySelector('.navbar');
+
+            // Função que altera a opacidade da navbar
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) { // Quando o scroll for maior que 50px
+                    navbar.style.backgroundColor = 'rgba(159, 67, 190, 0.8)'; // Opacidade 80%
+                } else {
+                    navbar.style.backgroundColor = '#9F43BE'; // Cor original sem transparência
+                }
+            });
+        document.querySelectorAll('.acordeon-header, .acordeon-headerv').forEach(header => {
+                header.addEventListener('click', () => {
+                    const content = header.nextElementSibling;
+                    const isVisible = content.style.display === 'block';
+                    content.style.display = isVisible ? 'none' : 'block';
+                    const icon = header.querySelector('.acordeon-icon');
+                    if (icon) {
+                        icon.classList.toggle('bx-chevron-up', !isVisible);
+                        icon.classList.toggle('bx-chevron-down', isVisible);
+                    }
+                });
+            });
+
+            const sliders = {};
+
+                function initSlider(sliderId) {
+                    const sliderEl = document.querySelector(`#${sliderId} .slider`);
+                    const slides = sliderEl.querySelectorAll('.slide');
+                    sliders[sliderId] = {
+                        currentSlide: 0,
+                        totalSlides: slides.length,
+                        sliderEl: sliderEl
+                    };
+                }
+
+                function updateSlider(sliderId) {
+                    const { currentSlide, sliderEl } = sliders[sliderId];
+                    sliderEl.style.transform = `translateX(-${currentSlide * 100}%)`;
+                }
+
+                function nextSlide(sliderId) {
+                    const slider = sliders[sliderId];
+                    slider.currentSlide = (slider.currentSlide + 1) % slider.totalSlides;
+                    updateSlider(sliderId);
+                }
+
+                function prevSlide(sliderId) {
+                    const slider = sliders[sliderId];
+                    slider.currentSlide = (slider.currentSlide - 1 + slider.totalSlides) % slider.totalSlides;
+                    updateSlider(sliderId);
+                }
+
+                // Inicializar todos os sliders
+                initSlider('slider1');
+                initSlider('slider2');
+                initSlider('slider3');
+                initSlider('slider4');
+    // Função para abrir o modal com o vídeo
+        function openVideoModal(element) {
+            var videoModal = document.getElementById('videoModal');
+            var iframe = document.getElementById('videoIframe');
+
+            // Obtém o link do vídeo do atributo 'data-video' do ícone de play clicado
+            var videoLink = element.getAttribute("data-video");
+
+            // Define o src do iframe com o link do vídeo
+            iframe.src = videoLink;
+
+            // Exibe o modal
+            videoModal.style.display = "flex";
+        }
+
+        // Função para fechar o modal
+        function closeVideoModal() {
+            var videoModal = document.getElementById('videoModal');
+            var iframe = document.getElementById('videoIframe');
+
+            // Limpa o vídeo (remove a URL para evitar que o vídeo continue tocando)
+            iframe.src = "";
+            videoModal.style.display = "none";  // Fecha o modal
+        }
+
+        // Impede o fechamento do modal quando o clique for dentro do modal de vídeo
+        document.getElementById('videoModal').addEventListener('click', function (event) {
+            // Apenas fecha o modal se o clique for fora da área de conteúdo (ou seja, na área preta)
+            if (event.target === this) {
+                closeVideoModal();
+            }
+        });
+        // Abrir modal ao clicar na imagem
+        function openModal(imgElement) {
+            let modal = document.getElementById("imageModal");
+            let modalImg = document.getElementById("modalImg");
+
+            modal.style.display = "flex";
+            modalImg.src = imgElement.src;
+        }
+
+        // Fechar modal ao clicar no fundo ou no botão "X"
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+</body>
+</html>
